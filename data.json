@@ -1,0 +1,68 @@
+[
+	{
+		"number": 112,
+		"origin": "Delhi",
+		"destination": "Dehradun",
+		"price": 232
+	},
+	{
+		"number": 812,
+		"origin": "Dehradun",
+		"destination": "Chandigarh",
+		"price": 192
+	},
+	{
+		"number": 357,
+		"origin": "Delhi",
+		"destination": "Agra",
+		"price": 152
+	},
+	{
+		"number": 720,
+		"origin": "Delhi",
+		"destination": "Lucknow",
+		"price": 195
+	},
+	{
+		"number": 840,
+		"origin": "Chandigarh",
+		"destination": "Delhi",
+		"price": 292
+	},
+	{
+		"number": 321,
+		"origin": "Agra",
+		"destination": "Lucknow",
+		"price": 246
+	},
+	{
+		"number": 499,
+		"origin": "Hyderabad",
+		"destination": "Delhi",
+		"price": 224
+	},
+	{
+		"number": 362,
+		"origin": "Delhi",
+		"destination": "Banglore",
+		"price": 216
+	},
+	{
+		"number": 472,
+		"origin": "Banglore",
+		"destination": "Hyderabad",
+		"price": 187
+	},
+	{
+		"number": 690,
+		"origin": "Agra",
+		"destination": "Banglore",
+		"price": 229
+	},
+	{
+		"number": 821,
+		"origin": "Delhi",
+		"destination": "Jaipur",
+		"price": 210
+	}
+]

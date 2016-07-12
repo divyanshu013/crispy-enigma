@@ -1,0 +1,75 @@
+<md-card>
+
+<div layout-gt-sm="row" class="md-padding">
+<md-input-container class="md-block" flex-gt-sm>
+	<label>Origin</label>
+	<input ng-model="search.origin">
+</md-input-container>
+<md-input-container class="md-block" flex-gt-sm>
+	<label>Destination</label>
+	<input ng-model="search.destination">
+</md-input-container>
+</div>
+
+<md-toolbar class="md-table-toolbar md-default" ng-show="reserveList.length">
+	<div class="md-toolbar-tools">
+		Reserved
+	</div>
+</md-toolbar>
+
+<md-table-container ng-show="reserveList.length">
+	<table md-table md-row-select>
+	    <thead md-head>
+	      <tr md-row>
+	        <th md-column md-numeric><span>Number</span></th>
+	        <th md-column>Origin</th>
+	        <th md-column>Destination</th>
+	        <th md-column md-numeric><span>Cost</span></th>
+	        <th md-column>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody md-body>
+	      <tr md-row md-select="train" md-select-id="number" ng-repeat="train in reserveList">
+	        <td md-cell>{{train.number}}</td>
+	        <td md-cell>{{train.origin}}</td>
+	        <td md-cell>{{train.destination}}</td>
+	        <td md-cell>{{train.price | currency:"&#8377;"}}</td>
+	        <td><md-button class="md-raised md-warn" ng-click="discard(train.number)">Discard</md-button></td>
+	      </tr>
+	    </tbody>
+ 	</table>
+</md-table-container>
+
+<!-- Reserve List -->
+
+<md-toolbar class="md-table-toolbar md-default">
+	<div class="md-toolbar-tools">
+		Trains
+	</div>
+</md-toolbar>
+
+<md-table-container>
+	<table md-table md-row-select>
+	    <thead md-head md-order="query.order">
+	      <tr md-row>
+	        <th md-column md-numeric md-order-by="number"><span>Number</span></th>
+	        <th md-column md-order-by="origin">Origin</th>
+	        <th md-column md-order-by="destination">Destination</th>
+	        <th md-column md-numeric md-order-by="price"><span>Cost</span></th>
+	        <th md-column>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody md-body>
+	      <tr md-row md-select="train" md-select-id="number" ng-repeat="train in data | filter: search | orderBy: query.order">
+	        <td md-cell>{{train.number}}</td>
+	        <td md-cell>{{train.origin}}</td>
+	        <td md-cell>{{train.destination}}</td>
+	        <td md-cell>{{train.price | currency:"&#8377;"}}</td>
+	        <td md-cell><md-button class="md-raised md-primary" ng-click="reserve(train.number)">Reserve</md-button>
+	        <md-button class="md-raised md-warn" ng-click="remove(train.number)">Remove</md-button></td>
+	      </tr>
+	    </tbody>
+ 	</table>
+</md-table-container>
+
+</md-card>

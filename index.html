@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Railway Reservation</title>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+	
+	<!-- Angular Material Library -->
+	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css">
+	<link rel="stylesheet" href="https://material.angularjs.org/1.1.0-rc.5/docs.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+	<!-- Angular Material Table style sheet -->
+	<link rel="stylesheet" href="http://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.css">
+	<script src="http://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-app="rail-res" ng-cloak="" ng-controller="AppCtrl">
+	<md-toolbar class="md-whiteframe-1dp">
+		<div class="md-toolbar-tools">
+			<h1>
+				<span href="#">Railway Reservation</span>
+			</h1>
+			<span flex></span>
+			<md-button class="md-fab md-mini" aria-label="Favorite" href="https://github.com/divyanshu013/crispy-enigma">
+				<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+				<md-tooltip md-direction="left">
+            		Fork me on GitHub!
+          		</md-tooltip>
+			</md-button>
+		</div>
+	</md-toolbar>
+
+	<md-content class="md-padding">
+	    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+	      <md-nav-item md-nav-href="#/" name="Home">Home</md-nav-item>
+	      <md-nav-item md-nav-href="#feed" name="Feed">Feed</md-nav-item>
+	      <md-nav-item md-nav-href="#about" name="About">About</md-nav-item>
+	    </md-nav-bar>
+  	</md-content>
+
+  	<md-content ng-view flex layout-padding>
+  		<!-- Views are inserted here -->
+  	</md-content>
+
+</body>
+</html>
